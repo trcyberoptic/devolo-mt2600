@@ -7,7 +7,7 @@ Die devolo Home Control Zentrale (Modell MT2600) lässt sich vollständig im eig
 | Thema | Ergebnis |
 | :--- | :--- |
 | Lokale Steuerung | Anmeldung, Sitzung, JSON-RPC und Live-Ereignisse (WebSocket) funktionieren ohne Cloudkontakt. Gekoppelte Z-Wave-Geräte lassen sich lesen und schalten. |
-| Zugangsdaten | Die Android-App sendet die lokalen Zugangsdaten per HTTP Basic Auth im Klartext an jedes Gerät, das im LAN ihre mDNS-Suche beantwortet. |
+| Zugangsdaten | Die Android-App sendet die lokalen Zugangsdaten per HTTP Basic Auth im Klartext an jedes Gerät, das im LAN ihre mDNS-Suche beantwortet. So lassen sich die Zugangsdaten aus einer noch eingerichteten App zurückgewinnen (Anleitung in Abschnitt 2.1 des Hauptdokuments). |
 | Diagnoseschnittstelle | Port 22879 (DHCI) beantwortet Lesezugriffe auf Status und Firmwareversion ohne Anmeldung. |
 | Schreibzugriff | Ein reversibler Schreibtest auf die Eigenschaft `description` war erfolgreich. |
 | Neue Z-Wave-Geräte anlernen | Mit dem lokalen Benutzerzugang wurde kein Weg gefunden. |
