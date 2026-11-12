@@ -1,0 +1,16 @@
+# Private Rohdaten des eigenen Geräts
+export-*/
+# Herstellerdateien und Dekompilate
+*.apk
+*.swf
+*.dvl
+*.squashfs
+*.zip
+*.deb
+*.run
+*.asm
+jadx/
+decompiled/
+extracted/
+__pycache__/
+.serena/

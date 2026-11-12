@@ -1,0 +1,492 @@
+{
+  "target": "10.0.0.107",
+  "read_only": true,
+  "source": "Live FIM metadata, no operations invoked",
+  "classes_requested": [
+    "com.devolo.fi.admin.DevoloGatewayFI",
+    "com.devolo.fi.page.AdvancedSettings",
+    "com.devolo.fi.gw.PortalManager",
+    "com.devolo.fi.page.DevicesPage",
+    "com.devolo.fi.widget.DeviceWidget"
+  ],
+  "metadata": [
+    {
+      "name": "DevoloGatewayFI",
+      "objectClass": "com.devolo.fi.admin.DevoloGatewayFI",
+      "description": null,
+      "version": "2.0.1",
+      "properties": [
+        {
+          "name": "fisInitialized",
+          "readable": true,
+          "classes": [
+            "int"
+          ],
+          "type": "NUMERIC"
+        },
+        {
+          "name": "assistantsConnected",
+          "readable": true,
+          "writable": true,
+          "classes": [
+            "int"
+          ],
+          "type": "NUMERIC"
+        },
+        {
+          "name": "btnPressed",
+          "readable": true,
+          "classes": [
+            "int"
+          ],
+          "type": "NUMERIC"
+        },
+        {
+          "name": "fwUpdateStatus",
+          "readable": true,
+          "classes": [
+            "int"
+          ],
+          "type": "NUMERIC"
+        },
+        {
+          "name": "fwUpdatePostponeCounter",
+          "readable": true,
+          "classes": [
+            "int"
+          ],
+          "type": "NUMERIC"
+        }
+      ],
+      "operations": [
+        {
+          "name": "firmwareUpdated",
+          "description": null
+        },
+        {
+          "name": "getLogsZipLocation",
+          "description": null,
+          "parametersTypes": [
+            {
+              "classes": [
+                "java.lang.String"
+              ],
+              "type": "GENERIC"
+            }
+          ],
+          "returnType": {
+            "classes": [
+              "java.lang.String"
+            ],
+            "type": "GENERIC"
+          }
+        },
+        {
+          "name": "saveUserData",
+          "description": null,
+          "parametersTypes": [
+            {
+              "classes": [
+                "java.lang.String"
+              ],
+              "type": "GENERIC"
+            },
+            {
+              "classes": [
+                "java.lang.String"
+              ],
+              "type": "GENERIC"
+            }
+          ]
+        },
+        {
+          "name": "factoryReset",
+          "description": null
+        },
+        {
+          "name": "destroyUser",
+          "description": null,
+          "parametersTypes": [
+            {
+              "classes": [
+                "java.lang.String"
+              ],
+              "type": "GENERIC"
+            }
+          ]
+        },
+        {
+          "name": "createUser",
+          "description": null,
+          "parametersTypes": [
+            {
+              "classes": [
+                "java.lang.String"
+              ],
+              "type": "GENERIC"
+            },
+            {
+              "classes": [
+                "java.lang.String"
+              ],
+              "type": "GENERIC"
+            },
+            {
+              "classes": [
+                "boolean"
+              ],
+              "type": "GENERIC"
+            }
+          ]
+        },
+        {
+          "name": "deleteLogsZip",
+          "description": null,
+          "parametersTypes": [
+            {
+              "classes": [
+                "java.lang.String"
+              ],
+              "type": "GENERIC"
+            }
+          ]
+        },
+        {
+          "name": "increaseFwUpdatePostponeCounter",
+          "description": null
+        },
+        {
+          "name": "waitForButtonPress",
+          "description": null,
+          "parametersTypes": [
+            {
+              "classes": [
+                "boolean"
+              ],
+              "type": "GENERIC"
+            }
+          ]
+        },
+        {
+          "name": "generateLogsZip",
+          "description": null,
+          "parametersTypes": [
+            {
+              "min": -2147483648,
+              "max": 2147483647,
+              "classes": [
+                "int"
+              ],
+              "type": "NUMERIC",
+              "step": 1
+            }
+          ],
+          "returnType": {
+            "classes": [
+              "java.lang.String"
+            ],
+            "type": "GENERIC"
+          }
+        }
+      ]
+    },
+    {
+      "name": "AdvancedSettings",
+      "objectClass": "com.devolo.fi.page.AdvancedSettings",
+      "description": null,
+      "version": "1.0.1",
+      "properties": [
+        {
+          "name": "enabled",
+          "readable": true,
+          "classes": [
+            "boolean"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "pendingOperations",
+          "readable": true,
+          "classes": [
+            "com.devolo.fi.async.base.OperationStatus[]"
+          ],
+          "type": "BEAN"
+        },
+        {
+          "name": "secureInclusion",
+          "readable": true,
+          "classes": [
+            "int"
+          ],
+          "type": "NUMERIC"
+        },
+        {
+          "name": "role",
+          "readable": true,
+          "classes": [
+            "int"
+          ],
+          "type": "NUMERIC"
+        },
+        {
+          "name": "operationStatus",
+          "readable": true,
+          "classes": [
+            "com.devolo.fi.async.base.OperationStatus"
+          ],
+          "type": "BEAN"
+        }
+      ],
+      "operations": [
+        {
+          "name": "learn",
+          "description": null,
+          "returnType": {
+            "classes": [
+              "com.devolo.fi.async.base.OperationStatus"
+            ],
+            "type": "BEAN"
+          }
+        }
+      ]
+    },
+    {
+      "name": "DeviceWidget",
+      "objectClass": "com.devolo.fi.widget.DeviceWidget",
+      "description": null,
+      "version": "2.0.11",
+      "properties": [
+        {
+          "name": "pendingOperations",
+          "readable": true,
+          "classes": [
+            "com.devolo.fi.async.base.OperationStatus[]"
+          ],
+          "type": "BEAN"
+        },
+        {
+          "name": "zoneId",
+          "readable": true,
+          "classes": [
+            "java.lang.String"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "batteryLow",
+          "readable": true,
+          "classes": [
+            "boolean"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "isSecurelyIncluded",
+          "readable": true,
+          "classes": [
+            "boolean"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "prodTypeID",
+          "readable": true,
+          "classes": [
+            "java.lang.String"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "zone",
+          "readable": true,
+          "classes": [
+            "java.lang.String"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "assistantsEnabled",
+          "readable": true,
+          "writable": true,
+          "classes": [
+            "int"
+          ],
+          "type": "NUMERIC"
+        },
+        {
+          "name": "statisticsUID",
+          "readable": true,
+          "classes": [
+            "java.lang.String"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "status",
+          "readable": true,
+          "classes": [
+            "int"
+          ],
+          "type": "NUMERIC"
+        },
+        {
+          "name": "prodID",
+          "readable": true,
+          "classes": [
+            "java.lang.String"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "secureInclusionCode",
+          "readable": true,
+          "classes": [
+            "int"
+          ],
+          "type": "NUMERIC"
+        },
+        {
+          "name": "settingUIDs",
+          "readable": true,
+          "classes": [
+            "java.lang.String[]"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "manID",
+          "readable": true,
+          "classes": [
+            "java.lang.String"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "batteryLevel",
+          "readable": true,
+          "classes": [
+            "int"
+          ],
+          "type": "NUMERIC"
+        },
+        {
+          "name": "icon",
+          "readable": true,
+          "classes": [
+            "java.lang.String"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "operationStatus",
+          "readable": true,
+          "classes": [
+            "com.devolo.fi.async.base.OperationStatus"
+          ],
+          "type": "BEAN"
+        },
+        {
+          "name": "wrongDevicePaired",
+          "readable": true,
+          "classes": [
+            "boolean"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "isOwn",
+          "readable": true,
+          "classes": [
+            "boolean"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "description",
+          "readable": true,
+          "writable": true,
+          "classes": [
+            "java.lang.String"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "deviceModelUID",
+          "readable": true,
+          "classes": [
+            "java.lang.String"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "itemName",
+          "readable": true,
+          "classes": [
+            "java.lang.String"
+          ],
+          "type": "GENERIC"
+        },
+        {
+          "name": "elementUIDs",
+          "readable": true,
+          "classes": [
+            "java.lang.String[]"
+          ],
+          "type": "GENERIC"
+        }
+      ],
+      "operations": [
+        {
+          "name": "retrieveReferencedWidgets",
+          "description": null,
+          "returnType": {
+            "classes": [
+              "java.lang.String[]"
+            ],
+            "type": "GENERIC"
+          }
+        },
+        {
+          "name": "forceRemove",
+          "description": null,
+          "returnType": {
+            "classes": [
+              "com.devolo.fi.async.base.OperationStatus"
+            ],
+            "type": "BEAN"
+          }
+        }
+      ]
+    }
+  ],
+  "registered_items": [
+    {
+      "class_names": [
+        "com.devolo.fi.admin.DevoloGatewayFI",
+        "com.prosyst.mbs.services.fim.FunctionalItem"
+      ],
+      "property_names": [
+        "assistantsConnected",
+        "btnPressed",
+        "fisInitialized",
+        "fwUpdatePostponeCounter",
+        "fwUpdateStatus"
+      ]
+    },
+    {
+      "class_names": [
+        "com.devolo.fi.page.AdvancedSettings",
+        "com.devolo.fi.page.Page",
+        "com.devolo.fi.async.base.AsyncFunctionalItem",
+        "com.prosyst.mbs.services.fim.FunctionalItem"
+      ],
+      "property_names": [
+        "enabled",
+        "operationStatus",
+        "pendingOperations",
+        "role",
+        "secureInclusion"
+      ]
+    }
+  ]
+}

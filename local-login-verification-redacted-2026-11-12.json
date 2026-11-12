@@ -1,0 +1,76 @@
+{
+  "target": "10.0.0.107",
+  "credentials_source": "local user-supplied document",
+  "device_changes": false,
+  "login_http": 200,
+  "session_http": 302,
+  "session_cookie_present": true,
+  "methods_http": 200,
+  "method_count": 94,
+  "read_methods": [
+    "FIM/getFunctionalItemUIDs",
+    "FIM/getFunctionalItems",
+    "FIM/getFunctionalItem",
+    "FIM/getProperty",
+    "FIM/getItemsMetadata",
+    "FIM/getItemsCreationMetadata",
+    "FIM/getBeansMetadata",
+    "FIM/getBeansCreationMetadata"
+  ],
+  "uids_http": 200,
+  "uids_error": {
+    "code": -32601,
+    "message": "Method 'getFunctionalItemUIDs()' not found"
+  },
+  "authenticated_read_succeeded": true,
+  "paired_device_count": 2,
+  "devices": [
+    {
+      "itemName": "Steckdose",
+      "deviceModelUID": "devolo.model.Wall:Plug:Switch:and:Meter",
+      "status": 1,
+      "batteryLevel": -1,
+      "batteryLow": false
+    },
+    {
+      "itemName": "Haustuer",
+      "deviceModelUID": "devolo.model.Door/Window:Sensor",
+      "status": 2,
+      "batteryLevel": 100,
+      "batteryLow": false
+    }
+  ],
+  "metadata_error": {
+    "code": -32601,
+    "message": "Method 'getItemsMetadata(array)' not found"
+  },
+  "element_states": [
+    {
+      "type": "",
+      "currentValue": 0,
+      "totalValue": 21.22,
+      "sensorType": "energy"
+    },
+    {
+      "type": "",
+      "state": 1
+    },
+    {
+      "type": "",
+      "state": 0,
+      "sensorType": "door"
+    },
+    {
+      "type": "",
+      "value": 20,
+      "unit": 0,
+      "sensorType": "temperature"
+    },
+    {
+      "type": "",
+      "value": 1,
+      "unit": 0,
+      "sensorType": "light"
+    }
+  ]
+}

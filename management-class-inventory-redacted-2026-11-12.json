@@ -1,0 +1,1851 @@
+[
+  {
+    "class": "com.devolo.fi.admin.DevoloGatewayFI",
+    "operations": [
+      "firmwareUpdated",
+      "getLogsZipLocation",
+      "saveUserData",
+      "factoryReset",
+      "destroyUser",
+      "createUser",
+      "deleteLogsZip",
+      "increaseFwUpdatePostponeCounter",
+      "waitForButtonPress",
+      "generateLogsZip"
+    ],
+    "properties": [
+      {
+        "name": "fisInitialized",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsConnected",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "btnPressed",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "fwUpdateStatus",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "fwUpdatePostponeCounter",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.async.base.AsyncFunctionalItem",
+    "operations": [],
+    "properties": [
+      {
+        "name": "pendingOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "operationStatus",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.common.UserPreferences",
+    "operations": [
+      "resetSessionTimeout"
+    ],
+    "properties": [
+      {
+        "name": "gender",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "lastName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "owner",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "location",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "language",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "devoloId",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "firstName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "showHowToVideo",
+        "readable": true,
+        "writable": true
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.control.BinarySwitchFI",
+    "operations": [
+      "turnOff",
+      "retrieveReferencedWidgets",
+      "turnOn"
+    ],
+    "properties": [
+      {
+        "name": "targetState",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "state",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "pendingOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "guiEnabled",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "operationStatus",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "type",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "widgetUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "switchType",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.control.CustomMessageFI",
+    "operations": [
+      "send",
+      "sendWithSnapshots",
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "guiEnabled",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "type",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "msgData",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "widgetUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.control.DeviceOfflineSystemMessageFI",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "enabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "lastActivityTime",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "guiEnabled",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "type",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "msgData",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "widgetUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.control.IftttRequestFI",
+    "operations": [
+      "send",
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "pendingOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "guiEnabled",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "operationStatus",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "type",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "widgetUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.control.LowBattSystemMessageFI",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "enabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "lastActivityTime",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "guiEnabled",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "type",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "msgData",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "widgetUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.control.ScheduleFI",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "enabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "guiEnabled",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "schedule",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "type",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "widgetUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.control.ServiceFI",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "enabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "service",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "guiEnabled",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "type",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "widgetUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.label.BinarySensorFI",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "state",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "sensorType",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "guiEnabled",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "subType",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "type",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "widgetUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.label.LastActivityFI",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "lastActivityTime",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "guiEnabled",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "subType",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "type",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "widgetUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.label.MeterFI",
+    "operations": [
+      "retrieveReferencedWidgets",
+      "resetTotalConsumption"
+    ],
+    "properties": [
+      {
+        "name": "pendingOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "sensorType",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "guiEnabled",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "sinceTime",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "currentValue",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "operationStatus",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "type",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "widgetUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "totalValue",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.label.MultiLevelSensorFI",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "value",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "unit",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "sensorType",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "guiEnabled",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "type",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "widgetUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.library.DeviceModel",
+    "operations": [],
+    "properties": [
+      {
+        "name": "deviceId",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "devoloDevice",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "deviceUIDs",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "deviceTypeId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.library.DeviceType",
+    "operations": [],
+    "properties": [
+      {
+        "name": "typeId",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "deviceModelUIDs",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.page.AdvancedSettings",
+    "operations": [
+      "learn"
+    ],
+    "properties": [
+      {
+        "name": "enabled",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "pendingOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "secureInclusion",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "role",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "operationStatus",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.page.AllDevices",
+    "operations": [],
+    "properties": [
+      {
+        "name": "deviceUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.page.Dashboard",
+    "operations": [
+      "saveConfiguration",
+      "removeTab",
+      "addTab"
+    ],
+    "properties": [
+      {
+        "name": "tabUIDs",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "widgets",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.page.DashboardTab",
+    "operations": [
+      "saveConfiguration"
+    ],
+    "properties": [
+      {
+        "name": "itemName",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "widgets",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.page.DeviceStatistics",
+    "operations": [
+      "retrieveDailyStatistics"
+    ],
+    "properties": []
+  },
+  {
+    "class": "com.devolo.fi.page.Grouping",
+    "operations": [
+      "renameZone",
+      "removeSmartGroup",
+      "addZone",
+      "deleteZone",
+      "updateSmartGroup",
+      "addSmartGroup"
+    ],
+    "properties": [
+      {
+        "name": "zones",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "defaultZone",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "smartGroupWidgetUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.page.HttpDevices",
+    "operations": [
+      "addHttpWidget",
+      "deleteHttpWidget"
+    ],
+    "properties": [
+      {
+        "name": "httpWidgetsUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.page.IPDevices",
+    "operations": [
+      "addHueBulb",
+      "searchBridges",
+      "addHueBulbs",
+      "searchAvailableHueBulbs",
+      "pairBridge",
+      "deletePowerMeterWidget",
+      "addSonosRoomWidget",
+      "addHueBulbWidget",
+      "addPowerMeter",
+      "addCamera",
+      "searchCameras",
+      "updateColorPreset",
+      "deleteHueBulbWidget",
+      "searchSonosRooms"
+    ],
+    "properties": [
+      {
+        "name": "sonosRoomWidgetsUIDs",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "sonosOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "pendingOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "sonosStatus",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "addHueBulbOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "cameraWidgetsUIDs",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "powerMeterWidgetsUIDs",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "hueBulbWidgetsUIDs",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "colorPresets",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "cameraOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "addHueBulbStatus",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "bridgesOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "bulbsOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "cameraStatus",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "operationStatus",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "bulbsStatus",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "bridgesStatus",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.page.Messages",
+    "operations": [
+      "deleteCustomMessage",
+      "updateDeviceOfflineSystemMessage",
+      "updateCustomMessage",
+      "addCustomMessage",
+      "updateLowBattSystemMessage"
+    ],
+    "properties": [
+      {
+        "name": "pnEndpoints",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "deviceOfflineSystemMessageUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "emailExt",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "emailAddresses",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "customMessageUIDs",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "lowBattSystemMessageUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "phoneNumbers",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.page.NavigationBar",
+    "operations": [],
+    "properties": [
+      {
+        "name": "pages",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.page.Page",
+    "operations": [],
+    "properties": []
+  },
+  {
+    "class": "com.devolo.fi.page.Scenes",
+    "operations": [
+      "deleteScene",
+      "updateScene",
+      "addScene"
+    ],
+    "properties": [
+      {
+        "name": "sceneUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.page.Schedules",
+    "operations": [
+      "updateSchedule",
+      "addSchedule",
+      "calculateTodaySunset",
+      "calculateTodaySunrise",
+      "deleteSchedule",
+      "calculateSunset",
+      "calculateSunrise"
+    ],
+    "properties": [
+      {
+        "name": "scheduleUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.page.Services",
+    "operations": [
+      "deleteService",
+      "updateService",
+      "addService"
+    ],
+    "properties": [
+      {
+        "name": "serviceUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.setting.ConfigurationParameterSetting",
+    "operations": [
+      "writeParameter",
+      "readParameter"
+    ],
+    "properties": [
+      {
+        "name": "value",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "paramChanged",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.setting.DeviceSetting",
+    "operations": [],
+    "properties": [
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.setting.GeneralDeviceSettings",
+    "operations": [
+      "save"
+    ],
+    "properties": [
+      {
+        "name": "settings",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.setting.LedIndicationSetting",
+    "operations": [
+      "save"
+    ],
+    "properties": [
+      {
+        "name": "pendingOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "operationStatus",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "targetLed",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "led",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.setting.ProtectionSetting",
+    "operations": [
+      "save"
+    ],
+    "properties": [
+      {
+        "name": "pendingOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "operationStatus",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "remoteSwitch",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "targetRemoteSwitch",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "targetLocalSwitch",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "localSwitch",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.setting.TemperatureReportSetting",
+    "operations": [
+      "save"
+    ],
+    "properties": [
+      {
+        "name": "pendingOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "tempReport",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "targetTempReport",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "operationStatus",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.setting.VisualFeedbackSetting",
+    "operations": [
+      "save"
+    ],
+    "properties": [
+      {
+        "name": "pendingOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "feedback",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "targetFeedback",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "operationStatus",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.widget.AllCustomMessagesWidget",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "description",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "itemName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "elementUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.widget.AllRulesWidget",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "description",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "itemName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "elementUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.widget.AllScenesWidget",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "description",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "itemName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "elementUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.widget.AllSchedulesWidget",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "description",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "itemName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "elementUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.widget.BaseWidget",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "status",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "settingUIDs",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "zoneId",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "zone",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "description",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "statisticsUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "elementUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.widget.CustomMessageWidget",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "base",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "description",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "itemName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "elementUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.widget.DeviceEventsWidget",
+    "operations": [
+      "retrieveReferencedWidgets",
+      "retrieveDailyData",
+      "retrieveAllData"
+    ],
+    "properties": [
+      {
+        "name": "forceRetrieve",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "newData",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "description",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "itemName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "elementUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.widget.DeviceWidget",
+    "operations": [
+      "retrieveReferencedWidgets",
+      "forceRemove"
+    ],
+    "properties": [
+      {
+        "name": "pendingOperations",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "zoneId",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "batteryLow",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "isSecurelyIncluded",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "prodTypeID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "zone",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "statisticsUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "status",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "prodID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "secureInclusionCode",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "settingUIDs",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "manID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "batteryLevel",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "operationStatus",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "wrongDevicePaired",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "isOwn",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "description",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "deviceModelUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "elementUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.widget.IftttWidget",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "description",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "itemName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "elementUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.widget.ScheduleWidget",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "description",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "itemName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "elementUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.widget.ServiceWidget",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "type",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "description",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "itemName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "elementUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.widget.SystemMessageWidget",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "description",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "itemName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "elementUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.widget.WeatherWidget",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "forecastData",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "lastUpdateTimestamp",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "description",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "currentTemp",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "elementUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.widget.Widget",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "icon",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "description",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "assistantsEnabled",
+        "readable": true,
+        "writable": true
+      },
+      {
+        "name": "itemName",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "elementUIDs",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.devolo.fi.widget.WidgetElement",
+    "operations": [
+      "retrieveReferencedWidgets"
+    ],
+    "properties": [
+      {
+        "name": "guiEnabled",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "type",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "widgetUID",
+        "readable": true,
+        "writable": false
+      },
+      {
+        "name": "itemId",
+        "readable": true,
+        "writable": false
+      }
+    ]
+  },
+  {
+    "class": "com.prosyst.mbs.services.fim.FunctionalItem",
+    "operations": [],
+    "properties": []
+  },
+  {
+    "class": "com.prosyst.mbs.services.fim.FunctionalItemFactory",
+    "operations": [
+      "getCreationMetadata",
+      "remove",
+      "create"
+    ],
+    "properties": []
+  },
+  {
+    "class": "com.prosyst.mbs.services.fim.groups.GroupAdmin",
+    "operations": [
+      "getRootGroups",
+      "getParentGroups",
+      "create",
+      "remove",
+      "getCreationMetadata"
+    ],
+    "properties": []
+  }
+]

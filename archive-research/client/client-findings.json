@@ -1,0 +1,49 @@
+{
+  "observed_at": "2026-11-12T00:42:46.9669989+01:00",
+  "app": {
+    "source": "https://d.apkpure.net/b/APK/com.devolo.homecontrol?version=latest",
+    "executed": false,
+    "version_code": 1463,
+    "version": "1.9.7",
+    "package": "com.devolo.homecontrol",
+    "sha256": "d6115cd03e19ae69071b3a376fb08223a7ce29dbc2843c3093bee7e881f6defc",
+    "jadx_errors": 5
+  },
+  "findings": [
+    {
+      "claim": "Wizard selects GatewayBackup.id and passes it to GatewayManager.pairGateway",
+      "files": [
+        "jadx/sources/de/devolo/homecontrol/viewmodel/HomeControlWizardViewModel.java:372",
+        "jadx/sources/de/devolo/homecontrol/viewmodel/HomeControlWizardViewModel.java:730",
+        "jadx/sources/de/devolo/mprm/core/fi/gw/GatewayManager.java:218"
+      ]
+    },
+    {
+      "claim": "GatewayManager invokes FIM pairGateway with one string argument; class is com.devolo.fi.gw.GatewayManager",
+      "files": [
+        "jadx/sources/de/devolo/mprm/core/fi/gw/GatewayManager.java:25",
+        "jadx/sources/de/devolo/mprm/core/fi/gw/GatewayManager.java:219"
+      ]
+    },
+    {
+      "claim": "Fallback web UI is <mprm-url>/root/index.html",
+      "files": [
+        "jadx/sources/de/devolo/homecontrol/viewmodel/WebviewFallbackViewModel.java:44"
+      ]
+    },
+    {
+      "claim": "Default MPRM base https://homecontrol.mydevolo.com/ now serves nginx welcome; /root/index.html returned 404",
+      "files": [
+        "hc-index.html",
+        "jadx/sources/de/devolo/homecontrol/C.java:9"
+      ]
+    }
+  ],
+  "limits": [
+    "No generateLogsZip, getLogsZipLocation, logsZip or storage.zip literal found in decompiled APK sources",
+    "No evidence for a local archive download path or restore upload route found",
+    "Only public internet files inspected; no local device calls and no user credentials accessed",
+    "Original mydevolo public login assets required expired-certificate bypass; no authentication or credential transmission"
+  ]
+}
+

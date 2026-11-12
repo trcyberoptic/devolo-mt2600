@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "backup-jsonrpc",
+    "Url": "https://docs.bosch-iot-suite.com/gateway-software/en/81827.htm"
+  },
+  {
+    "Name": "file-transfer-manager",
+    "Url": "https://docs.bosch-iot-suite.com/remote-manager/APIs/osgidm/apis/java/com/prosyst/mprm/gateway/filetransfer/FileTransferManager.html"
+  },
+  {
+    "Name": "log-files-reader",
+    "Url": "https://docs.bosch-iot-suite.com/remote-manager/APIs/osgidm/apis/java/com/prosyst/mprm/admin/logfile/LogFilesReader.html"
+  },
+  {
+    "Name": "remote-log-service",
+    "Url": "https://docs.bosch-iot-suite.com/remote-manager/en/OSGi-Device-Remote-Log-Service.html"
+  },
+  {
+    "Name": "backup-installation",
+    "Url": "https://docs.bosch-iot-suite.com/remote-manager/en/Backup-and-Restore.html"
+  }
+]

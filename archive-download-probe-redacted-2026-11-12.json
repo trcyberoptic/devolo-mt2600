@@ -1,0 +1,91 @@
+{
+  "target": "10.0.0.107",
+  "restore_invoked": false,
+  "generated_archive": true,
+  "downloaded": false,
+  "cleanup_called": true,
+  "requests": [
+    {
+      "path": "/root/index.html",
+      "status": 404,
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": "182"
+    },
+    {
+      "path": "/system/console",
+      "status": 404,
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": "182"
+    },
+    {
+      "path": "/system/console/logs",
+      "status": 404,
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": "182"
+    },
+    {
+      "path": "/system/console/status",
+      "status": 404,
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": "182"
+    },
+    {
+      "path": "/tmp/osgi/<generated_storage.zip>",
+      "status": 404,
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": "182"
+    },
+    {
+      "path": "/root/<generated_storage.zip>",
+      "status": 404,
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": "182"
+    },
+    {
+      "path": "/logs/<generated_storage.zip>",
+      "status": 404,
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": "182"
+    },
+    {
+      "path": "/remote/backup/<generated_storage.zip>",
+      "status": 404,
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": "182"
+    },
+    {
+      "path": "/remote/files/<generated_storage.zip>",
+      "status": 404,
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": "182"
+    },
+    {
+      "path": "/remote/filetransfer/<generated_storage.zip>",
+      "status": 404,
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": "182"
+    },
+    {
+      "path": "/dhlp/portal/full/<generated_storage.zip>",
+      "status": 401,
+      "content_type": "text/plain",
+      "content_length": null
+    }
+  ],
+  "gateway_manager_metadata_count": 0,
+  "reported_location": "/tmp/osgi",
+  "cleanup_rpc_error": null,
+  "location_after_cleanup": "still_returned",
+  "authenticated_portal_candidate": {
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 108,
+    "json_keys": [
+      "link",
+      "code"
+    ]
+  },
+  "nonexistent_filename_returns_same_directory": true,
+  "cleanup_result_type": "NoneType",
+  "cleanup_independently_verified": false
+}

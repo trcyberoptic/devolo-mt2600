@@ -1,0 +1,34 @@
+devolo MT2600 - complete TCP port scan
+Date: 2026-11-11 (Europe/Berlin)
+Target: 10.0.0.107
+Connection path: Windows host through Tailscale subnet route
+
+Command:
+nmap -sT -Pn -n -p 1-65535 --max-rate 150 --max-parallelism 32 --max-retries 1 --host-timeout 20m --stats-every 30s --reason 10.0.0.107
+
+Nmap scan report for 10.0.0.107
+Host is up, received user-set (0.00036s latency).
+Not shown: 65532 filtered tcp ports (no-response)
+PORT      STATE SERVICE         REASON
+80/tcp    open  http            syn-ack
+8081/tcp  open  blackice-icecap syn-ack
+22879/tcp open  unknown         syn-ack
+
+Nmap done: 1 IP address (1 host up) scanned in 878.57 seconds
+
+Interpretation:
+- All 65,535 TCP ports were scanned. Nmap exited successfully.
+- Ports 80, 8081 and 22879 accepted TCP connections.
+- The service labels in the scan are port-name lookups, not service identification.
+- 65,532 ports were classified as filtered/no-response; this does not prove they are closed.
+- UDP was not scanned.
+
+Read-only follow-up:
+- A second TCP connection to 22879 succeeded; no server-first banner arrived within 3 seconds.
+- mDNS advertised _http._tcp.local on TCP 80.
+- mDNS advertised _dvl-deviceapi._tcp.local on TCP 14791, path /deviceapi, version v0.
+- TCP 14791 was not reachable in the scan despite being advertised.
+- mDNS reported MT2600, firmware 8.91.1.
+- No advertised service was matched to TCP 22879.
+- No login attempts, device configuration changes, reboots or firmware updates were performed.
+

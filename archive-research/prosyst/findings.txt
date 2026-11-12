@@ -1,0 +1,41 @@
+ProSyst / Bosch archive-transfer research, 2026-11-12
+Scope: public primary Bosch documentation only. No device requests were made by this researcher.
+
+Result
+No documented device-local HTTP servlet/path for the devolo-generated timestamp_storage.zip was found. The getLogsZipLocation return value /tmp/osgi is a filesystem location; the sources below do not establish a matching HTTP route. The custom names generateLogsZip/getLogsZipLocation were not found in public Bosch docs/code search. Do not treat /tmp/osgi, /logs, /fim, /dhlp or an invented /download route as documented endpoints.
+
+1. Standard local Backup JSON-RPC path exists in the platform, but is optional
+Source: https://docs.bosch-iot-suite.com/gateway-software/en/81827.htm
+BACKUP/listProviders has no parameters.
+BACKUP/backup takes backup-properties object and optional provider-info array. Result is {url, status}. The returned url is intended to fetch the backup over HTTP using the same host and port as the JSON-RPC request. It expires; documented default mbs.remote.backup.urlTimeout is 5000 ms. mbs.remote.backup.localOnly defaults false. mbs.remote.backup.filename selects archive filename.
+BACKUP/restore takes restore-properties object, location string, optional provider-info array. Current docs interpret location as backup filename; older behavior accepted URL and can be restored with mbs.webservices.jsonrpc.legacy.restoreFromUrl=true.
+Separate bundle: com.prosyst.mbs.webservices.jsonrpc.handler.backup, documented at https://docs.bosch-iot-suite.com/gateway-software/en/93837.htm . Presence of JSON-RPC core alone does not prove this handler exists.
+Parent reported live BACKUP/listProviders response -32601, Cannot find Module/Service with PID:BACKUP. Therefore these docs establish a platform capability, not an available transfer route on this MT2600. No backup or restore was invoked by this researcher.
+
+2. mPRM FileTransferManager is backend-oriented
+Source: https://docs.bosch-iot-suite.com/remote-manager/APIs/osgidm/apis/java/com/prosyst/mprm/gateway/filetransfer/FileTransferManager.html
+This interface describes transfer to and from the mPRM backend. Its methods:
+  uploadFile(String fileType, String fileID, java.io.File file, boolean sync)
+  downloadFile(String fileType, String fileID, java.io.File file, boolean sync)
+  listRemoteFiles(String fileType)
+  uploadFile(FileDescriptor, FileTransferOptions)
+  downloadFile(FileDescriptor, FileTransferOptions)
+Upload sends device files to the backend; download obtains files from the backend. None of the basic signatures accepts an arbitrary remote HTTP URL. listRemoteFiles gets backend file identifiers.
+This means backend-mediated, not inherently cloud-only. The docs do not establish a stand-alone local HTTP GET endpoint on the gateway, nor prove that the deployed devolo cloud currently offers the corresponding backend service.
+Source: https://docs.bosch-iot-suite.com/remote-manager/en/Backup-and-Restore.html
+The implementation requires osgidm.filetransfer.be.jar and osgidm.backup.be.jar on RM; osgidm.filetransfer.agent.jar and osgidm.backup.agent.jar on the device with Backup Admin enabled.
+
+3. Standard remote log retrieval also goes through the backend
+Source: https://docs.bosch-iot-suite.com/remote-manager/en/OSGi-Device-Remote-Log-Service.html
+Remote Log Extension Service sends local Gateway Software log-file contents to the backend on request. Its agent is osgidm.log.files.agent.jar.
+Source: https://docs.bosch-iot-suite.com/remote-manager/APIs/osgidm/apis/java/com/prosyst/mprm/admin/logfile/LogFilesReader.html
+Backend API methods are getLogFileNames(String osgiDeviceId) and getLogFile(String osgiDeviceId, String fileName), returning String[] and InputStream respectively. Device IDs explicitly refer to OSGi devices managed by mPRM.
+
+4. Web Console local logs need a separate plugin
+Source: https://docs.bosch-iot-suite.com/gateway-software/en/93876.htm
+Bundle com.prosyst.mbs.web.console.logfiles supplies log-file listing/viewing in the Apache Felix based Web Console. The documentation does not state its concrete download URL. Parent has reported /system/console returns 404, so this is not evidence of an exposed route.
+Source: https://docs.bosch-iot-suite.com/gateway-software/en/77043.htm
+Util Inventory uses RemoteLogReader and can attach log files to its ZIP export through Web Console. This is another optional Web Console capability, not proof of access to the custom devolo archive.
+
+Research limitations
+The public pages are Bosch Gateway Software / RM 7.1 documentation, not the complete source or exact bundle manifest/configuration of R1.0_DHC_MS8_B91_1. Version and integration differences matter. Public docs establish the API distinctions above but cannot supply a verified custom devolo servlet route. Exact application JavaScript, bundle configuration, or the device's registered servlet list would be stronger evidence than path guessing.

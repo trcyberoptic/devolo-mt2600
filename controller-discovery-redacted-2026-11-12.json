@@ -1,0 +1,22 @@
+{
+  "factory_supported_classes": [
+    [
+      "com.prosyst.mbs.services.fim.groups.Group"
+    ]
+  ],
+  "HDAdmin/getProtocolAdapterInfos": {
+    "error_code": -32601,
+    "result_type": "NoneType"
+  },
+  "HDAccess/getHomeDevices": {
+    "error_code": -32601,
+    "result_type": "NoneType"
+  },
+  "requested_controller_classes": [
+    "com.prosyst.mbs.services.zwave.deviceclasses.ZWaveNetworkController",
+    "com.prosyst.mbs.services.zwave.da.items.ZWaveNetworkController"
+  ],
+  "controller_metadata_count": 0,
+  "controller_metadata_error_code": null,
+  "pairing_or_removal_invoked": false
+}

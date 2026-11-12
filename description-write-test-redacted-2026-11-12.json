@@ -1,0 +1,9 @@
+{
+  "device_name": "Steckdose",
+  "property": "description",
+  "original_type": "NoneType",
+  "baseline_write_accepted": true,
+  "temporary_value_verified": true,
+  "restore_verified": true,
+  "fresh_session_restore_verified": true
+}

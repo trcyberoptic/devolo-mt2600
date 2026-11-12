@@ -1,0 +1,124 @@
+{
+  "date": "2026-11-12",
+  "target": {
+    "ip": "10.0.0.107",
+    "port": 22879,
+    "reported_model": "MT2600",
+    "reported_firmware": "8.91.1"
+  },
+  "transport": "TCP / HTTP",
+  "nmap": {
+    "command": "nmap -sT -Pn -n -sV --version-light -p 22879 --max-retries 1 --host-timeout 90s --reason 10.0.0.107",
+    "state": "open",
+    "service_identified_by_nmap": false,
+    "observed_response": {
+      "status": 400,
+      "http_version": "1.0",
+      "body": {
+        "result": "version_missing"
+      }
+    }
+  },
+  "probes": [
+    {
+      "method": "GET",
+      "path": "/",
+      "status": 400,
+      "result": "version_missing"
+    },
+    {
+      "method": "GET",
+      "path": "/deviceapi/v0/",
+      "status": 400,
+      "result": "version_missing"
+    },
+    {
+      "method": "GET",
+      "path": "/deviceapi/v0/UptimeGet",
+      "status": 400,
+      "result": "version_missing"
+    },
+    {
+      "method": "GET",
+      "path": "/?version=1",
+      "status": 400,
+      "result": "malformed_request"
+    },
+    {
+      "method": "POST",
+      "path": "/",
+      "form": {
+        "version": "1"
+      },
+      "result": "connection closed without response"
+    },
+    {
+      "method": "GET",
+      "path": "/?version=1&type=sync&target=System&key=ProductName",
+      "status": 400,
+      "result": "malformed_request"
+    },
+    {
+      "method": "GET",
+      "path": "/?version=1&target=System&key=FirmwareVersion",
+      "status": 200,
+      "response": {
+        "result": "8.91.1_2021-06-29"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/?version=1&type=get&target=System&key=ProductName",
+      "status": 400,
+      "result": "malformed_request"
+    },
+    {
+      "method": "GET",
+      "path": "/?version=1&type=query&target=System&key=ProductName",
+      "status": 400,
+      "result": "malformed_request"
+    },
+    {
+      "method": "GET",
+      "path": "/?version=1&target=System&key=status",
+      "status": 200,
+      "bytes": 1393,
+      "authentication_sent": false,
+      "firmware": {
+        "date": "2021-06-29",
+        "dvl-version": "v1.2.14_2021-06-29_0001",
+        "internal-version": "0001",
+        "svn-revision": "0",
+        "java-version": "version-15.8.1.80.4",
+        "osgi-version": "R1.0_DHC_MS8_B91_1",
+        "zwave-version": "ZW4.54.0_SDK6.51.10_FEEP3"
+      },
+      "redacted_evidence_file": "dhci-system-status-redacted-2026-11-12.json"
+    }
+  ],
+  "interpretation": {
+    "basis": "Original NetScanner client and separate dLAN550 firmware static analysis provided matching GET syntax, verified live with HTTP 200 for System.status and System.FirmwareVersion.",
+    "proven_read_request": true,
+    "successful_configuration_reads": true,
+    "configuration_writes": false,
+    "authentication_attempts": false,
+    "telnet_activation_attempted": false,
+    "root_access_obtained": false,
+    "linux_kernel_confirmed": false,
+    "caveat": "Read-only metadata access on MT2600 is confirmed. Write capability, Telnet activation, shell/root access, Z-Wave control and old dLAN firmware vulnerabilities remain untested and unproven for this device.",
+    "confirmed_service": "devolo Host Configuration Interface (DHCI)",
+    "unauthenticated_read_verified": true,
+    "firmware_version_getter": "8.91.1_2021-06-29",
+    "java_osgi_zwave_versions_reported": true
+  },
+  "sources": [
+    "https://intellisec.de/research/devolo/2019-eurosec.pdf",
+    "https://github.com/intellisec/devolo/blob/master/dvl_setvar.py",
+    "https://github.com/intellisec/devolo/blob/master/dvl_web/dvl_search.html"
+  ],
+  "local_static_evidence": [
+    "dhci-static/FINDINGS.md",
+    "dhci-client/READ-PROTOCOL-EVIDENCE.md"
+  ],
+  "privacy": "Raw System.status was parsed in memory only; serial, MAC, hostnames and identifiers omitted from saved status evidence. HomePlug/Local was not requested."
+}

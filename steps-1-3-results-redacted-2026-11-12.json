@@ -1,0 +1,25 @@
+{
+  "snapshot_directory": "export-20261111T232436Z (lokal, nicht im Repo)",
+  "requested_and_exported_functional_items": 120,
+  "metadata_classes": 55,
+  "paired_devices": 2,
+  "service_objects": 4,
+  "schedule_objects": 1,
+  "snapshot_files": 19,
+  "supplementary_files": 6,
+  "read_signature_errors_resolved": true,
+  "restorable_backup_proven": false,
+  "description_test": {
+    "device_name": "Steckdose",
+    "property": "description",
+    "original_type": "NoneType",
+    "baseline_write_accepted": true,
+    "temporary_value_verified": true,
+    "restore_verified": true,
+    "fresh_session_restore_verified": true
+  },
+  "zwave_inclusion_found": false,
+  "zwave_regular_exclusion_found": false,
+  "pairing_or_removal_invoked": false,
+  "controller_discovery_file": "controller-discovery-redacted-2026-11-12.json"
+}
